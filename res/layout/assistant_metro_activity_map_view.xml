@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:gesture-image="http://schemas.polites.com/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <include layout="@layout/sky_activity_header" android:id="@+id/header"/>
+        <com.polites.android.GestureImageView
+                android:id="@+id/imageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                gesture-image:min-scale="0.1"
+                gesture-image:max-scale="10.0"
+                gesture-image:strict="false"/>
+</LinearLayout>

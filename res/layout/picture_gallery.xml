@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_height="fill_parent" 
+		android:layout_width="fill_parent" 
+		android:orientation="vertical" > 
+ <com.blue.sky.mobile.manager.picture.gallery.QGallery
+     	android:layout_height="match_parent" 
+ 		android:layout_width="match_parent" 
+ 		android:spacing="30dip"
+ 		android:id="@+id/gallery"/>
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_alignParentBottom="true"
+              android:orientation="vertical"
+              android:layout_height="wrap_content">
+    <TextView
+            android:id="@+id/image_progress"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="24dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    <include layout="@layout/picture_opt_control_layout"></include>
+</LinearLayout>
+
+</RelativeLayout>

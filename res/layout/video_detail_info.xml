@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:id="@+id/list_item"
+              android:layout_gravity="center_horizontal"
+              android:background="@color/background_grey"
+              android:orientation="vertical">
+
+    <include layout="@layout/sky_activity_header"  android:id="@+id/header"  />
+
+    <ImageView
+            android:id="@+id/item_icon"
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="180dp"
+            android:maxHeight="240dp" />
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="12dp"
+                  android:orientation="vertical">
+        <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                android:textColor="@color/title"
+                android:text="">
+        </TextView>
+        <TextView
+                android:id="@+id/item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:textColor="@color/light_more_gray"
+                android:text="时长:">
+        </TextView>
+        <TextView
+                android:id="@+id/item_hit"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/light_more_gray"
+                android:text="热度:">
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+            style="@style/btn_play_blue_bg"
+            android:text="播   放"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_width="fill_parent"
+            android:id="@+id/btn_opt"/>
+</LinearLayout>

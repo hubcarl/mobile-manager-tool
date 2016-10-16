@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <include layout="@layout/sky_activity_header"  android:id="@+id/header"  />
+    <ProgressBar android:id="@+id/webview_progress_bar"
+                 android:layout_width="fill_parent"
+                 android:layout_below="@+id/header"
+                 style="?android:attr/progressBarStyleHorizontal"
+                 android:progressDrawable="@drawable/sky_progress_style"
+                 android:layout_height="2dp" />
+    <com.blue.sky.control.webview.CrossDomainWebView android:id="@+id/web_app_view"
+                                                     android:layout_below="@+id/webview_progress_bar"
+                                                     android:layout_height="fill_parent"
+                                                     android:layout_width="fill_parent"
+                                                     android:scrollbars="vertical">
+    </com.blue.sky.control.webview.CrossDomainWebView>
+</LinearLayout>

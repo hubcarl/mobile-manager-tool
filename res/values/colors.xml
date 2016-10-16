@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="pager_sliding_extend_background_window">#FFE5E5E5</color>
+    <!-- drop down list header font color -->
+    <color name="drop_down_list_header_font_color">#000000</color>
+    <!-- drop down list header second font color -->
+    <color name="drop_down_list_header_second_font_color">#000000</color>
+    <!-- drop down list footer font color -->
+    <color name="drop_down_list_footer_font_color">#000000</color>
+
+    <!-- A transparent black -->
+    <color name="transparent_black">#aa000000</color>
+    
+    <!-- selected tab text -->
+    <color name="selected_tabtext">#bb000000</color>
+    
+    <!-- non selected tab text -->
+    <color name="unselected_tabtext">#77000000</color>
+
+    <!-- A semi-transparent dark Holo shade of blue -->
+    <color name="holo_blue_dark">#ff0099cc</color>
+    
+    <color name="shuffle_grey">#ffdedede</color>
+
+    <color name="background_grey">#ffdedede</color>
+    
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+
+    <!-- Black -->
+    <color name="black">#ff000000</color>
+    <color name="actionbar_black_normal">#222222</color>
+    <color name="actionbar_black_hover">#000000</color>
+
+    <!-- White -->
+    <color name="white">#ffffffff</color>
+    
+    <!-- Quick Queue line seperator -->
+    <color name="actionbar_text">#eeffffff</color>
+
+    <!-- Quick Queue line seperator -->
+    <color name="queue_callout_line">#99ffffff</color>
+
+    <color name="yellow">#FFFF00</color>
+    <color name="light_yellow">#FFEC8B</color>
+    <color name="light_gray">#f6f6f6</color>
+    <color name="light_gray_letter">#EDEDED</color>
+    <color name="light_more_gray">#B7B7B7</color>
+    <color name="light_more_gray2">#909090</color>
+    <color name="item_light_gray_bg">#f6f6f6</color>
+    <color name="title">#6E6E6E</color>
+    <color name="panel_title">#080808</color>
+    <color name="list_item_title">#454545</color>
+    <color name="sky_yellow">#EE5C42</color>
+    <color name="sky_red">#FF4040</color>
+    <color name="sky_green">#43CD80</color>
+    <color name="sky_blue">#3cb3e9</color>
+    <color name="sky_blank">#00000000</color>
+    <color name="sky_light_blank">#4F4F4F</color>
+    <color name="sky_blue_bg">#50b4e5</color>
+
+    <color name="setting_space_background">#ECECEC</color>
+    <color name="setting_default_text_main_383838">#383838</color>
+
+    <color name="qrcode_viewfinder_frame">#ff000000</color>
+    <color name="qrcode_viewfinder_laser">#ffff0000</color>
+    <color name="qrcode_viewfinder_mask">#60000000</color>
+    <color name="qrcode_result_view">#b0000000</color>
+    <color name="qrcode_possible_result_points">#c0ffff00</color>
+</resources>

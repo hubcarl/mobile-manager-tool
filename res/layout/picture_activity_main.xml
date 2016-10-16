@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/white" >
+    <include layout="@layout/sky_activity_header"  android:id="@+id/header"  />
+    <GridView
+        android:id="@+id/main_grid"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="20dip"
+        android:gravity="center"
+        android:verticalSpacing="20dip"
+        android:columnWidth="90dip"
+        android:numColumns="2" >
+    </GridView>
+
+</RelativeLayout>

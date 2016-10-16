@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>房贷计算器</title>
+    <script type="text/javascript" async="" src="js/mv.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/calculator.css">
+    <script type="text/javascript" async="" src="js/mvl.js"></script>
+    <script type="text/javascript" src="js/zz.js"></script>
+</head>
+<body>
+
+<div class="main">
+    <div id="content-main">
+        <div class="calc-header" style="display:none;">
+            <h1>房贷计算器</h1>
+        </div>
+
+        <div class="content-block input-block">
+            <div class="input_fangdai">
+
+                <form id="input-form">
+                    <input id="calc-lid" type="hidden" value="1">
+                    <table class="div1">
+                        <tbody>
+                        <tr>
+                            <td width="110">计算方式</td>
+                            <td>
+                                <input type="radio" name="sy_type" id="sy_type_1" value="1" checked=""> <label
+                                    for="sy_type_1">按贷款额度算</label>&nbsp;&nbsp;
+                                <input type="radio" name="sy_type" id="sy_type_2" value="2"> <label
+                                    for="sy_type_2">按面积算</label>
+                            </td>
+                        </tr>
+                        <tr class="div1_1">
+                            <td>贷款金额</td>
+                            <td>
+                                <div class="inpt-wrap">
+                                    <input type="text" class="inpt" id="dkje_1"
+                                           style="border: 1px solid rgb(214, 214, 214);">
+                                    <span>万元</span>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr class="div1_2">
+                            <td>平米单价</td>
+                            <td>
+                                <div class="inpt-wrap">
+                                    <input type="text" class="inpt" id="pmdj_1"
+                                           style="border: 1px solid rgb(214, 214, 214);">
+                                    <span>元/平米</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="div1_2">
+                            <td>面积</td>
+                            <td>
+                                <div class="inpt-wrap">
+                                    <input type="text" class="inpt" id="mj_1"
+                                           style="border: 1px solid rgb(214, 214, 214);">
+                                    <span>平米</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="div1_2">
+                            <td>购房性质</td>
+                            <td style="position:relative;z-index:1000">
+                                <input type="radio" name="sy_gfxz" id="sy_gfxz_1" value="1" checked=""><label
+                                    for="sy_gfxz_1">一套房</label>&nbsp;&nbsp;
+                                <input type="radio" name="sy_gfxz" id="sy_gfxz_2" value="2"><label
+                                    for="sy_gfxz_2">二套房</label><span class="help"
+                                                                     style="margin-top:2px;*margin-top:13px"
+                                                                     id="sy_etf"></span>
+
+                                <div class="tsk" id="sy_etf_help" style="margin-top: 4px; width: 320px; display: none;">
+                                    <img src="images/kuang-arrow.png" class="pngfix jt" style="left:112px;*left:76px;">
+                                    <img src="images/close.png" class="close">
+
+                                    <div>
+                                        <strong>二套房界定标准：</strong><br>
+                                        1、借款人首次申请利用贷款购买住房，在拟购房所在地房屋登记信息系统（含预售合同登记备案系统）中，其家庭已登记有一套（及以上）成套住房的。<br>
+                                        2、借款人已利用贷款购买过一套（及以上）住房，又申请贷款购买住房的。<br>
+                                        3、贷款人通过查询征信记录、面测、面谈等形式的尽责调查，确信借款人家庭已有一套（及以上）住房的。
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="div1_2">
+                            <td>首付</td>
+                            <td>
+                                <div id="sfbl_sel_1" class="sel">
+
+                                    <div panes="layer" id="sfbl_list_1" class="yt-list"
+                                         style="top: 28px; left: 0px; width: 176px; display: none;">
+                                        <div ivalue="2"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">2成
+                                        </div>
+                                        <div ivalue="3" class="list-div-hover"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">3成
+                                        </div>
+                                        <div ivalue="4"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">4成
+                                        </div>
+                                        <div ivalue="5"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">5成
+                                        </div>
+                                        <div ivalue="6"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">6成
+                                        </div>
+                                        <div ivalue="7"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">7成
+                                        </div>
+                                        <div ivalue="8"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">8成
+                                        </div>
+                                        <div ivalue="9"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">9成
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="sfbl_1" id="_combox_inp_sfbl_sel_1" value="3"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>贷款期限</td>
+                            <td>
+                                <div id="sy_qixian_wrap" class="autocomplete_wrap" style="z-index: 900;">
+                                    <div class="sb_value sb_input_wrap">
+                                        <div class="sb_input">
+                                            <input type="text" required="true" data-autocpt="autocomplete"
+                                                   autocomplete="off" data-target="#sy_qixian_wrap"
+                                                   valid="cs_loan_limit" blur-valid="false"
+                                                   valid-data="positive|请输入贷款金额||maxvalue:10000|金额过高, 请注意单位为万元"
+                                                   cate="num" need="true" name="dkqx_1" value="30">
+                                            <span class="sb_inp_suffix" style="color: rgb(51, 51, 51);">年</span>
+                                        </div>
+                                        <div class="dropdownBtn" data-toggle="dropdown"
+                                             data-target="#sy_qixian_wrap"></div>
+                                    </div>
+                                    <ul class="autocomplete-list" role="autocomplete-list">
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="5">5年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="10">10年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="15">15年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="20">20年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="25">25年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="30">30年</a></li>
+                                    </ul>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="5">5年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="10">10年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="15">15年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="20">20年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="25">25年</a></li>
+                                        <li><a href="http://www.rong360.com/calculator/fangdai.html#"
+                                               data-val="30">30年</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>年利率</td>
+                            <td>
+                                <div id="dklv_sel_1" class="sel" style="z-index: 800;">
+
+                                    <div panes="layer" id="dklv_list_1" class="yt-list"
+                                         style="top: 28px; left: 0px; width: 176px; display: none;">
+                                        <div ivalue="0.7"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率7折
+                                        </div>
+                                        <div ivalue="0.8"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率8折
+                                        </div>
+                                        <div ivalue="0.83"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率8.3折
+                                        </div>
+                                        <div ivalue="0.85"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率8.5折
+                                        </div>
+                                        <div ivalue="0.88"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率8.8折
+                                        </div>
+                                        <div ivalue="0.9"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率9折
+                                        </div>
+                                        <div ivalue="0.95"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率9.5折
+                                        </div>
+                                        <div ivalue="1" class="list-div-hover"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率
+                                        </div>
+                                        <div ivalue="1.05"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率1.05倍
+                                        </div>
+                                        <div ivalue="1.1"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率1.1倍
+                                        </div>
+                                        <div ivalue="1.2"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率1.2倍
+                                        </div>
+                                        <div ivalue="1.3"
+                                             style="width: 156px; height: 25px; line-height: 25px; cursor: pointer;">
+                                            最新基准利率1.3倍
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="lvbs_1" id="_combox_inp_dklv_sel_1" value="1"></div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span class="lilv-hint">您也可以手动输入</span>
+                                <input type="text" class="inpt lilv_r" id="dklv_1"
+                                       style="border: 1px solid rgb(214, 214, 214);">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button class="btn cal-btn" did="1">计 算</button>
+                                <button class="btn reset-btn" did="1">重 置</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="content-block result-block">
+
+            <div class="result_fangdai">
+
+                <table id="result">
+                    <tbody>
+                    <tr>
+                        <td style="position:relative" width="345">
+                            <div><h3>每月等额还款</h3></div>
+
+                            <table cellpadding="0" cellspacing="0" class="tbl" style="width:310px;">
+                                <tbody>
+                                <tr>
+                                    <td class="td1">贷款总额</td>
+                                    <td class="td2"><var id="_debx_dkje">560,000.00</var> 元</td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">还款月数</td>
+                                    <td class="td2"><var id="_debx_dkqx">360</var> 月</td>
+                                </tr>
+                                <tr height="50">
+                                    <td class="td1">每月还款</td>
+                                    <td class="td2"><em id="_debx_myhk">3,321.56</em> 元</td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">总支付利息</td>
+                                    <td class="td2"><em id="_debx_zflx">635,763.20</em> 元</td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">本息合计</td>
+                                    <td class="td2"><em id="_debx_hkze">1,195,763.20</em> 元</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td style="position:relative" width="345">
+                            <div><h3>逐月递减还款</h3></div>
+                            <table cellpadding="0" cellspacing="0" class="tbl" style="width:310px;">
+                                <tbody>
+                                <tr>
+                                    <td class="td1">贷款总额</td>
+                                    <td class="td2"><var id="_debj_dkje">560,000.00</var> 元</td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">还款月数</td>
+                                    <td class="td2"><var id="_debj_dkqx">360</var> 月</td>
+                                </tr>
+                                <tr height="50">
+                                    <td class="td1">首月还款</td>
+                                    <td class="td2" style="line-height:20px"><em id="_debj_syhk">4,308.89</em> 元<br>每月递减：<b
+                                            id="_debj_mydj">7.65</b> 元
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">总支付利息</td>
+                                    <td class="td2"><em id="_debj_zflx">496,976.67</em> 元</td>
+                                </tr>
+                                <tr>
+                                    <td class="td1">本息合计</td>
+                                    <td class="td2"><em id="_debj_hkze">1,056,976.67</em> 元</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <script type="text/javascript" src="js/common.js"></script>
+                <script src="js/combox.js" type="text/javascript"></script>
+                <script src="js/loan-cal.js" type="text/javascript"></script>
+                <script src="js/fangdai-cal.js" type="text/javascript"></script>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

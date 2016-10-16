@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:orientation="horizontal">
+
+        <TextView
+                style="@style/code_common_tab_style"
+                android:visibility="gone"
+                android:background="@drawable/sky_item_click_selector"
+                android:id="@+id/btn_share"
+                android:text="分享">
+        </TextView>
+
+        <TextView
+                style="@style/code_common_tab_style"
+                android:id="@+id/btn_crop"
+                android:background="@drawable/sky_item_click_selector"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:text="裁剪">
+        </TextView>
+
+        <TextView
+                style="@style/code_common_tab_style"
+                android:background="@drawable/sky_item_click_selector"
+                android:id="@+id/btn_background"
+                android:text="设置壁纸">
+        </TextView>
+</LinearLayout>
+

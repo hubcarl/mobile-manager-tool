@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/sky_activity_header"  android:id="@+id/header"  />
+	<com.blue.sky.control.slidinguppanel.SlidingUpPanelLayout
+	    android:id="@+id/sliding_layout"
+        android:layout_below="@+id/header"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="bottom">
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+		    android:clickable="true"
+			android:focusable="false"
+        	android:background="@color/background_grey"
+			android:focusableInTouchMode="true" >
+		
+		    <com.blue.sky.mobile.manager.music.ui.widgets.ScrollableTabView
+		        android:id="@+id/scrollingTabs"
+		        android:layout_width="match_parent"
+        		android:background="@color/white"
+		        android:layout_height="@dimen/tab_height"/>
+		
+		    <android.support.v4.view.ViewPager
+		        android:id="@+id/viewPager"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/scrollingTabs" />
+		</LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+			android:orientation="vertical" 
+        	android:background="@color/white"
+            android:id="@+id/music_bottom"
+			android:clickable="true"
+			android:focusable="false" >
+	        <RelativeLayout
+				    android:id="@+id/bottom_action_bar_container2"
+				    android:layout_width="match_parent"
+				    android:layout_height="@dimen/bottom_action_bar_height"
+				    android:layout_gravity="top"
+				    android:orientation="vertical" >
+
+                <LinearLayout android:id="@+id/liner_bottom_network"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent">
+                    <fragment android:name="com.blue.sky.mobile.manager.music.module.network.activity.MusicBottomFragment"
+                              android:id="@+id/bottom_action_bar_network"
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent" />
+                </LinearLayout>
+
+            </RelativeLayout>
+			<fragment android:name="com.blue.sky.mobile.manager.music.ui.fragments.AudioPlayerFragment"
+	            android:id="@+id/audio_player_view"
+	            android:layout_weight="1"
+				android:layout_width="match_parent"
+           		android:layout_height="match_parent" /> 
+	    </LinearLayout>
+	</com.blue.sky.control.slidinguppanel.SlidingUpPanelLayout>
+</RelativeLayout>

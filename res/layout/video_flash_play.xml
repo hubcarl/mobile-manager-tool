@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    <include android:id="@+id/header" layout="@layout/sky_activity_header" ></include>
+    <ProgressBar android:id="@+id/webview_progress_bar"
+                 android:layout_width="fill_parent"
+                 android:layout_below="@+id/header"
+                 style="?android:attr/progressBarStyleHorizontal"
+                 android:progressDrawable="@drawable/sky_progress_style"
+                 android:layout_height="2dp" />
+    <com.blue.sky.control.webview.CrossDomainWebView android:id="@+id/web_app_view"
+        android:layout_below="@+id/webview_progress_bar"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:scrollbars="vertical">
+    </com.blue.sky.control.webview.CrossDomainWebView>
+
+    <RelativeLayout
+                  android:id="@+id/ad_container"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:layout_alignParentBottom="true"
+                  android:orientation="vertical" >
+        <FrameLayout
+                android:id="@+id/banner_ad_container"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"/>
+
+        <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/banner_ad_container"
+                android:id="@+id/ad_close"
+                android:src="@drawable/search_clear_normal"
+                android:layout_marginTop="-60dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

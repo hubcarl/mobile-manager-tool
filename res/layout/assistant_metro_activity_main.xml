@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <include layout="@layout/sky_activity_header" android:id="@+id/header"/>
+
+    <!--<LinearLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="10dp">-->
+
+        <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="@dimen/item_height"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:background="@drawable/common_bg_preference_single"-->
+                <!--android:clickable="true"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingLeft="8dp"-->
+                <!--android:paddingRight="10dp">-->
+            <!--<TextView-->
+                    <!--android:id="@+id/btn_choose_city"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:drawableLeft="@drawable/icon_favorite"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="城市：广州"-->
+                    <!--android:textColor="@color/setting_default_text_main_383838"-->
+                    <!--android:textSize="18sp"/>-->
+
+            <!--<ImageView android:id="@+id/map_view" style="@style/setting_right_img"/>-->
+
+        <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+    <GridView
+            android:id="@+id/gridView"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:stretchMode="columnWidth"
+            android:horizontalSpacing="20dip"
+            android:gravity="center"
+            android:verticalSpacing="20dip"
+            android:columnWidth="90dip"
+            android:numColumns="2" >
+    </GridView>
+</LinearLayout>

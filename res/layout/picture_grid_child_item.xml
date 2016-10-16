@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/framelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <com.blue.sky.mobile.manager.picture.control.MyImageView
+        android:id="@+id/child_image"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:background="@drawable/pictures_no"
+        android:scaleType="fitXY" />
+
+    <CheckBox
+        android:id="@+id/child_checkbox"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/pictures_select_icon" />
+
+</FrameLayout>

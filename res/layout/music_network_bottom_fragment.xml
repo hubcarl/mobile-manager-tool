@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_action_bar_height"
+    android:layout_gravity="bottom"
+    android:orientation="vertical" >
+    <ImageView
+            android:id="@+id/bottom_action_bar_info_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_action_bar_divider_height"
+            android:background="@color/holo_blue_dark" />
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sky_item_click_selector"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:orientation="horizontal">
+
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:layout_marginRight="120dp"
+                      android:layout_marginLeft="12dp"
+                      android:orientation="vertical">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView
+                        android:id="@+id/item_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textSize="14sp"
+                        android:textColor="@color/title"
+                        android:text="">
+                </TextView>
+                <TextView
+                        android:id="@+id/item_time"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/light_more_gray"
+                        android:text="">
+                </TextView>
+            </RelativeLayout>
+
+            <SeekBar
+                    android:id="@+id/music_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:minHeight="4dp"
+                    android:maxHeight="4dp"
+                    android:thumbOffset="0dip"
+                    android:progressDrawable="@drawable/music_seekbar_progress"
+                    android:thumb="@drawable/music_seekbar_thum"
+                    android:max="100" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:layout_centerVertical="true">
+            <ImageButton
+                    android:id="@+id/prev"
+                    style="@style/BottomActionBarItem"
+                    android:contentDescription="@string/cd_previous"
+                    android:src="@drawable/apollo_holo_light_previous" />
+
+            <ImageButton
+                    android:id="@+id/playOrPause"
+                    style="@style/BottomActionBarItem"
+                    android:contentDescription="@string/cd_play"
+                    android:src="@drawable/apollo_holo_light_play" />
+
+            <ImageButton
+                    android:id="@+id/next"
+                    style="@style/BottomActionBarItem"
+                    android:contentDescription="@string/cd_next"
+                    android:src="@drawable/apollo_holo_light_next" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

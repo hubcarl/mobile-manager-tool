@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_grey"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+    <include layout="@layout/sky_activity_header"  android:id="@+id/header"  />
+    <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@id/header"
+            android:cacheColorHint="@color/transparent"
+            android:drawSelectorOnTop="false"
+            android:fastScrollAlwaysVisible="false"
+            android:fastScrollEnabled="false"
+            android:scrollbars="none"
+            android:listSelector="@drawable/music_holo_selector"
+            android:background="@color/background_grey"
+            android:divider="@android:color/transparent"
+            android:paddingRight="@dimen/listview_items_padding_top_bottom"
+            android:paddingLeft="@dimen/listview_items_padding_top_bottom"/>
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="@dimen/bottom_action_bar_height"
+                  android:layout_alignParentBottom="true">
+        <fragment android:name="com.blue.sky.mobile.manager.music.module.network.activity.MusicBottomFragment"
+                  android:id="@+id/list_music_bottom_play"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

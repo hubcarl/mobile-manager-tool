@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:id="@+id/list_item"
+              android:paddingLeft="1dp"
+              android:paddingRight="1dp"
+              android:paddingTop="1dp"
+              android:paddingBottom="1dp"
+              android:background="@color/background_grey"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+    <TextView
+            android:id="@+id/app_install"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/sky_blue"
+            android:background="@drawable/apk_list_item_click_selector"
+            android:text="安  装">
+    </TextView>
+    <TextView
+            android:id="@+id/app_open"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/sky_blue"
+            android:background="@drawable/apk_list_item_click_selector"
+            android:text="打  开">
+    </TextView>
+    <TextView
+            android:id="@+id/app_upgrade"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/sky_blue"
+            android:background="@drawable/apk_list_item_click_selector"
+            android:text="升  级">
+    </TextView>
+    <TextView
+            android:id="@+id/app_unInstall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:background="@drawable/apk_list_item_click_selector"
+            android:textColor="@color/sky_blue"
+            android:text="卸  载">
+    </TextView>
+    <TextView
+            android:id="@+id/app_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/sky_blue"
+            android:background="@drawable/apk_list_item_click_selector"
+            android:text="删  除">
+    </TextView>
+    <TextView
+            android:id="@+id/app_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:background="@drawable/apk_list_item_click_selector"
+            android:textColor="@color/sky_blue"
+            android:text="详  情">
+    </TextView>
+</LinearLayout>

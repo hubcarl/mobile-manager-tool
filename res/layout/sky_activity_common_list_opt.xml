@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_grey"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/loading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="正在努力扫描中..."
+                android:gravity="center"
+                android:indeterminateDrawable="@drawable/sky_common_small_circle_progress"
+                style="@style/small_progress_style"
+                />
+        <TextView
+                android:id="@+id/tip_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="正在努力扫描中..."
+                android:textColor="@color/sky_green"
+                android:textSize="16dp"/>
+    </LinearLayout>
+    <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/loading"
+            android:cacheColorHint="@color/transparent"
+            android:drawSelectorOnTop="false"
+            android:fastScrollAlwaysVisible="false"
+            android:fastScrollEnabled="false"
+            android:scrollbars="none"
+            android:listSelector="@drawable/music_holo_selector"
+            android:background="@color/background_grey"
+            android:divider="@android:color/transparent"
+            android:layout_marginBottom="40dp"
+            android:paddingRight="@dimen/listview_items_padding_top_bottom"
+            android:paddingLeft="@dimen/listview_items_padding_top_bottom"/>
+
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/btn_bg_blue">
+        <TextView
+                android:id="@+id/btnOpt"
+                android:text="一键清理"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_centerVertical="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+        <CheckBox
+                style="@style/CustomCheckboxTheme"
+                android:id="@+id/btnCheckAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="11dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
